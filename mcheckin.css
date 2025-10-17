@@ -1,0 +1,375 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(/g14.jpg)no-repeat center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover; /* Ensure background covers the whole area */
+}
+
+/* Background Decoration */
+.bg-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.shape-3 {
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 80%;
+    animation-delay: 4s;
+}
+
+.shape-4 {
+    width: 100px;
+    height: 100px;
+    bottom: 70%;
+    left: 40%;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+
+/* Login Box/Main Container */
+.login-container {
+    position: relative;
+    z-index: 10;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    margin: auto;
+}
+
+/* Header Styles */
+.login-header {
+    margin-bottom: 25px;
+}
+
+.gym-logo h1 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.gym-logo span {
+    display: block;
+    font-size: 0.8em;
+    color: #f9a825;
+    letter-spacing: 3px;
+    margin-top: -5px;
+}
+
+.login-header h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 15px;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+/* Form Styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    position: relative;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #f9a825;
+    box-shadow: 0 0 10px rgba(249, 168, 37, 0.3);
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%; /* Adjusted for label presence */
+    transform: translateY(12px);
+    color: #999;
+    font-size: 1.2em;
+}
+
+/* Button Styles */
+.form-actions {
+    margin-top: 20px;
+}
+
+.login-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #2c3e50, #f9a825);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn:hover {
+    background: linear-gradient(90deg, #34495e, #fbc02d);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.5);
+}
+
+.login-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Response Box */
+.response-box {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Hidden by default */
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Loader Spin */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #f9a825;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Success/Error States (for future use) */
+.form-group.success input {
+    border-color: #28a745;
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.2);
+}
+
+.form-group.error input {
+    border-color: #dc3545;
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.2);
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* ===========================================
+   NEW STYLES FOR TOGGLE AND QR SCANNER
+   =========================================== */
+
+.input-method-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.toggle-btn {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover {
+    background-color: #ccc;
+    transform: translateY(-1px);
+}
+
+.toggle-btn.active {
+    background: linear-gradient(90deg, #2c3e50, #f9a825);
+    color: white;
+    box-shadow: 0 4px 10px rgba(44, 62, 80, 0.4);
+}
+
+.input-section {
+    padding: 10px;
+    border-radius: 10px;
+    /* Removed background/shadow for a cleaner look within the login-box */
+}
+
+/* Style the QR reader container */
+#qr-reader {
+    width: 100% !important;
+    border: 2px dashed #f9a825;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 auto;
+    /* Ensure the camera feed is responsive */
+}
+
+/* Style the area where the camera feed is displayed */
+#qr-reader__scan_region {
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+#qr-reader-results {
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 30px 25px;
+        margin: 10px;
+    }
+    
+    .gym-logo h1 {
+        font-size: 2.5em;
+    }
+    
+    .login-header h2 {
+        font-size: 1.5em;
+    }
+    
+    .login-btn {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}
+/* Non Member Registration Button */
+.nonmember-btn {
+    display: inline-block;
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px 0;
+    background: linear-gradient(135deg, #1e90ff, #0073e6);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nonmember-btn i {
+    margin-right: 8px;
+}
+
+.nonmember-btn:hover {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.nonmember-btn:active {
+    transform: scale(0.98);
+}

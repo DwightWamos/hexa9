@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-image: url(g14.jpg);
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(246, 203, 48, 0.7);
+    padding: 45px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 10; 
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #b30909;
+    margin-bottom: -22px;
+}
+
+.logo {
+    margin: 10px 0;
+    line-height: 1;
+    font-size: bold;
+}
+
+.logo-g14 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #b30909;
+    display: block;
+}
+
+.logo-fitness {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b30909;
+    display: block;
+    letter-spacing: 0.1em;
+}
+
+.logo-centre {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #b30909;
+    display: block;
+    letter-spacing: 0.1em;
+}
+
+.log-in-text {
+    font-size: bold;
+    font-weight: 400;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.input-group input {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    width: 100px;
+    padding: 10px;
+    background-color: #8a734d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.20s ease;
+}
+
+.login-button:hover {
+    background-color: #7b6545;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.login-button:active {
+  transform: scale(0.95);
+  background-color: black;
+}
